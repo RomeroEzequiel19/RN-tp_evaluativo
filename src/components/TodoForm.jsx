@@ -21,13 +21,41 @@ const TodoForm = () => {
 
   // Retorna un formulario para agregar tareas
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        marginBottom: "10px",
+        justifyContent: "center",
+        width: "50%",
+      }}
+    >
       <input
         type="text"
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
+        style={{
+          marginRight: "10px",
+          padding: "5px",
+          borderRadius: "4px",
+          border: "1px solid #ccc",
+          fontSize: "16px",
+          flexGrow: "1",
+        }}
       />
-      <button onClick={addTodo}>Agregar</button>
+      <button
+        onClick={addTodo}
+        style={{
+          padding: "5px 10px",
+          backgroundColor: "#007bff",
+          color: "#fff",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer",
+          fontSize: "16px",
+        }}
+      >
+        Agregar
+      </button>
     </div>
   );
 };

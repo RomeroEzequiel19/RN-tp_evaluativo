@@ -5,7 +5,7 @@ import TodoList from "./components/TodoList";
 const App = () => {
   return (
     <div>
-      <h1>Aplicación de Lista de Tareas</h1>
+      <h1 style={{ fontFamily: "Arial" }}>Aplicación de Lista de Tareas</h1>
       {/* Renderiza el formulario de tareas y la lista*/}
       <TodoForm />
       <TodoList />

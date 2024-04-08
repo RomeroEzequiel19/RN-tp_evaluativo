@@ -31,11 +31,14 @@ export const TodoListProvider = ({ children }) => {
 };
 
 export const useTodoList = () => {
+  // Accede al contexto del proveedor de lista de tareas
   const context = useContext(TodoListContext);
+  // Lanza un error si el hook se utiliza fuera del ámbito del proveedor
   if (!context) {
     throw new Error(
       "useTodoList debe ser utilizado dentro de un TodoListProvider"
     );
   }
+  // Retorna el contexto, que proporciona acceso al estado de la lista de tareas y la función para actualizarla
   return context;
 };
